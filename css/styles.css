@@ -511,13 +511,13 @@ a {
     height: 150px;
   }
   .offres-grid:not(.offres-grid--adresses) .offre-bloc:nth-child(1) {
-    background-image: url('../images/bureaux-mobile.jpg') !important;
+    background-image: url('../images/offre-espaces-mobile.jpg') !important;
   }
   .offres-grid:not(.offres-grid--adresses) .offre-bloc:nth-child(2) {
-    background-image: url('../images/maison-kwerk-mobile.jpg') !important;
+    background-image: url('../images/offre-experience-mobile.jpg') !important;
   }
   .offres-grid:not(.offres-grid--adresses) .offre-bloc:nth-child(3) {
-    background-image: url('../images/eventwinter.jpg') !important;
+    background-image: url('../images/offre-evenements-mobile.jpg') !important;
   }
   .offre-bloc .offre-label {
     font-size: 16px;
@@ -622,7 +622,7 @@ a {
 .service-vignette-img {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   background: #111 center/cover no-repeat;
   filter: saturate(0.92);
   transition: transform 0.4s ease;

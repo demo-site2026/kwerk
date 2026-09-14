@@ -753,8 +753,9 @@ a {
     flex: 1 1 calc(50% - 8px);
   }
   .service-vignette figcaption {
-    font-size: 11px;
-    letter-spacing: 1px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 1.25;
   }
   .cta-final-section {
     padding: 60px 24px 70px;
@@ -3982,7 +3983,8 @@ a {
 }
 @media (max-width: 480px) {
   #offres .offre-bloc .offre-sub,
-  .offres-section--adresses .offre-bloc .offre-sub {
+  .offres-section--adresses .offre-bloc .offre-sub,
+  .service-vignette figcaption {
     font-size: 14px;
   }
 }

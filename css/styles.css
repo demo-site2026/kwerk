@@ -3949,3 +3949,34 @@ a {
     margin-bottom: 56px;
   }
 }
+
+/* Home mobile : blocs "Nos offres" et adresses plus hauts, sans "En savoir plus",
+   sous-titre à la taille du texte d'intro (.exceptional-body) */
+@media (max-width: 700px) {
+  #offres .offre-bloc,
+  .offres-section--adresses .offre-bloc {
+    height: 280px;
+    justify-content: center;
+    padding: 24px;
+  }
+  #offres .offre-bloc .offre-label,
+  .offres-section--adresses .offre-bloc .offre-label {
+    margin-top: 0;
+  }
+  #offres .offre-bloc .offre-sub,
+  .offres-section--adresses .offre-bloc .offre-sub {
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 1.5;
+  }
+  #offres .offre-bloc .offre-link,
+  .offres-section--adresses .offre-bloc .offre-link {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  #offres .offre-bloc .offre-sub,
+  .offres-section--adresses .offre-bloc .offre-sub {
+    font-size: 14px;
+  }
+}

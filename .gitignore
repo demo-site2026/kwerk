@@ -7,3 +7,6 @@ images/KWERK_MAIN_*
 
 # Apex = brouillon de session, jetable. Ce qui survit part dans DECISIONS.md / README.md / ref/.
 .apex/
+
+# Cache Python des scripts de build — régénéré à chaque exécution
+__pycache__/

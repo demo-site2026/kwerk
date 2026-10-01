@@ -3988,3 +3988,36 @@ a {
     font-size: 14px;
   }
 }
+
+/* Home, section d'intro : moins de blanc autour, titre et texte alignés à
+   gauche dans un bloc qui reste centré (la barre verticale a été retirée). */
+.exceptional-section--home {
+  padding: 64px 0 48px;
+}
+.exceptional-section--home .exceptional-container {
+  max-width: 660px;
+  text-align: left;
+}
+.exceptional-section--home .exceptional-heading {
+  text-align: left;
+  margin-bottom: 28px;
+}
+.exceptional-section--home .exceptional-body {
+  text-align: left;
+  max-width: none;
+  margin: 0;
+}
+#offres .offres-title {
+  padding-top: 40px;
+}
+@media (max-width: 700px) {
+  .exceptional-section--home {
+    padding: 40px 0 28px;
+  }
+  .exceptional-section--home .exceptional-heading {
+    margin-bottom: 20px;
+  }
+  #offres .offres-title {
+    padding-top: 24px;
+  }
+}

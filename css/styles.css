@@ -4225,3 +4225,22 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Home FR + EN : bouton "En savoir plus" de Notre histoire un peu plus grand
+   que ceux des cartes (le visuel est large et clair, il s'y perdait). */
+.histoire-section.home-left .histoire-card .offre-link {
+  bottom: 32px;
+  padding: 10px 26px;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+}
+.histoire-section.home-left .histoire-card .offre-link::after {
+  border-color: rgba(255, 255, 255, 0.9);
+}
+@media (max-width: 700px) {
+  .histoire-section.home-left .histoire-card .offre-link {
+    bottom: 24px;
+    padding: 9px 22px;
+    font-size: 13px;
+  }
+}

@@ -4056,10 +4056,11 @@ a {
   }
 }
 
-/* Home FR, blocs "Nos offres" : en mobile, visuels portrait pleine page et
+/* Home FR, blocs "Nos offres" et adresses : en mobile, visuels portrait pleine page et
    textes aux tailles desktop (même rendu que les cartes desktop). */
 @media (max-width: 700px) {
-  #offres .offre-bloc.offre-bloc--portrait {
+  #offres .offre-bloc.offre-bloc--portrait,
+  .offres-section--adresses .offre-bloc.offre-bloc--portrait {
     background-position: center;
     height: 100vh;
     height: 100svh;
@@ -4074,11 +4075,13 @@ a {
   #offres .offre-bloc.offre-bloc--evenements {
     background-image: url('../images/vos-evenements-diner.jpg') !important;
   }
-  #offres .offre-bloc.offre-bloc--portrait .offre-label {
+  #offres .offre-bloc.offre-bloc--portrait .offre-label,
+  .offres-section--adresses .offre-bloc.offre-bloc--portrait .offre-label {
     font-size: 26px;
     letter-spacing: -0.5px;
   }
-  #offres .offre-bloc.offre-bloc--portrait .offre-sub {
+  #offres .offre-bloc.offre-bloc--portrait .offre-sub,
+  .offres-section--adresses .offre-bloc.offre-bloc--portrait .offre-sub {
     font-size: 18px;
     letter-spacing: 0.05em;
     line-height: 1.4;

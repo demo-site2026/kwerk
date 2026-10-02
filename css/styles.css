@@ -4056,21 +4056,29 @@ a {
   }
 }
 
-/* Home FR, bloc "Nos espaces" : en mobile, visuel portrait pleine page et
-   textes aux tailles desktop (même rendu que la carte desktop). */
+/* Home FR, blocs "Nos offres" : en mobile, visuels portrait pleine page et
+   textes aux tailles desktop (même rendu que les cartes desktop). */
 @media (max-width: 700px) {
-  #offres .offre-bloc.offre-bloc--espaces {
-    background-image: url('../images/nos-espaces-bureau.jpg') !important;
+  #offres .offre-bloc.offre-bloc--portrait {
     background-position: center;
     height: 100vh;
     height: 100svh;
     padding: 36px 20px 28px;
   }
-  #offres .offre-bloc.offre-bloc--espaces .offre-label {
+  #offres .offre-bloc.offre-bloc--espaces {
+    background-image: url('../images/nos-espaces-bureau.jpg') !important;
+  }
+  #offres .offre-bloc.offre-bloc--experience {
+    background-image: url('../images/maison-kwerk.jpg') !important;
+  }
+  #offres .offre-bloc.offre-bloc--evenements {
+    background-image: url('../images/vos-evenements-diner.jpg') !important;
+  }
+  #offres .offre-bloc.offre-bloc--portrait .offre-label {
     font-size: 26px;
     letter-spacing: -0.5px;
   }
-  #offres .offre-bloc.offre-bloc--espaces .offre-sub {
+  #offres .offre-bloc.offre-bloc--portrait .offre-sub {
     font-size: 18px;
     letter-spacing: 0.05em;
     line-height: 1.4;

@@ -4087,3 +4087,16 @@ a {
     line-height: 1.4;
   }
 }
+
+/* Home FR mobile : espace entre les visuels "Nos offres" et adresses égal à
+   la marge latérale. */
+@media (max-width: 700px) {
+  .home-left .offres-grid {
+    gap: 16px;
+  }
+}
+@media (max-width: 380px) {
+  .home-left .offres-grid {
+    gap: 12px;
+  }
+}

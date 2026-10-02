@@ -4191,3 +4191,50 @@ a {
     padding: 24px 20px;
   }
 }
+
+/* Home FR, Nos services : libellé des vignettes en haut à gauche, aligné à
+   gauche et plus petit, pour laisser la place aux visages (photo Accueil
+   décalée en conséquence dans index.html). */
+.services-vignettes-section.home-left .service-vignette-img {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 32px 28px;
+}
+.services-vignettes-section.home-left .service-vignette figcaption {
+  text-align: left;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+@media (max-width: 700px) {
+  .services-vignettes-section.home-left .service-vignette-img {
+    padding: 16px 14px;
+  }
+  .services-vignettes-section.home-left .service-vignette figcaption {
+    font-size: 12px;
+    letter-spacing: 0.3px;
+  }
+}
+/* Photo Accueil : monsieur décalé à droite (et libellés réduits sur les
+   écrans intermédiaires) pour que sa tête ne passe pas sous le libellé. */
+.service-vignette-img--accueil {
+  background-position: 28% center;
+}
+@media (max-width: 1100px) {
+  .services-vignettes-section.home-left .service-vignette figcaption {
+    font-size: 14px;
+  }
+  .service-vignette-img--accueil {
+    background-position: 22% center;
+  }
+}
+@media (max-width: 900px) {
+  .services-vignettes-section.home-left .service-vignette-img {
+    padding: 16px 14px;
+  }
+  .services-vignettes-section.home-left .service-vignette figcaption {
+    font-size: 12px;
+  }
+  .service-vignette-img--accueil {
+    background-position: 16% center;
+  }
+}

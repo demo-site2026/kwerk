@@ -4130,16 +4130,22 @@ a {
   left: 0;
   width: 200%;
   height: 200%;
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: 999px;
   transform: scale(0.5);
   transform-origin: 0 0;
   pointer-events: none;
 }
+/* Survol : le bouton reste transparent, léger voile et contour un peu plus net
+   (il ne se remplit plus de blanc). */
 #offres.home-left .offre-bloc:hover .offre-link,
 .offres-section--adresses.home-left .offre-bloc:hover .offre-link {
-  background: #fff;
-  color: #111;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+#offres.home-left .offre-bloc:hover .offre-link::after,
+.offres-section--adresses.home-left .offre-bloc:hover .offre-link::after {
+  border-color: rgba(255, 255, 255, 0.85);
 }
 
 /* Home FR + EN : moins de blanc entre les visuels et la phrase d'accroche de

@@ -4175,10 +4175,14 @@ a {
   }
 }
 
-/* Home desktop : titres des visuels "Nos offres" et adresses à 30px. */
+/* Home desktop : titres des visuels "Nos offres" et adresses à 30px, toujours
+   sur une ligne. La taille se réduit sur les écrans plus étroits : le plus long
+   titre (EXPERIENCE BY KWERK, 11,16em en Helvetica Neue Light) doit tenir dans
+   la largeur utile d'un bloc = (100vw - 104px) / 3 - 56px. */
 @media (min-width: 701px) {
   #offres .offre-bloc .offre-label,
   .offres-section--adresses .offre-bloc .offre-label {
-    font-size: 30px;
+    font-size: clamp(12px, calc(2.85vw - 7.5px), 30px);
+    white-space: nowrap;
   }
 }

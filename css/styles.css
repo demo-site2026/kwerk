@@ -4126,23 +4126,6 @@ a {
   color: #111;
 }
 
-/* Home EN : intro adresses (version longue) alignée à gauche comme la home
-   FR, sans la barre verticale. */
-.home-left .adresses-intro-body {
-  text-align: left;
-}
-.adresses-intro-section.home-left .adresses-intro-sep {
-  display: none;
-}
-@media (max-width: 700px) {
-  .home-left .adresses-intro-body {
-    font-size: 15px;
-  }
-  .home-left .adresses-intro-body br {
-    display: none;
-  }
-}
-
 /* Home FR + EN : moins de blanc entre les visuels et la phrase d'accroche de
    la section suivante (80px desktop, 40px mobile) et entre une accroche et
    ses visuels (40px desktop, 24px mobile). */

@@ -4100,3 +4100,23 @@ a {
     gap: 12px;
   }
 }
+
+/* Home FR : bouton "En savoir plus" détouré (pilule) sous le texte de chaque
+   visuel "Nos offres" et adresses, desktop et mobile. */
+#offres.home-left .offre-bloc .offre-link,
+.offres-section--adresses.home-left .offre-bloc .offre-link {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 34px;
+  border: 1.5px solid #fff;
+  border-radius: 999px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+#offres.home-left .offre-bloc:hover .offre-link,
+.offres-section--adresses.home-left .offre-bloc:hover .offre-link {
+  background: #fff;
+  color: #111;
+}

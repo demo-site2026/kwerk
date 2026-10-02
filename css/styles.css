@@ -4022,7 +4022,7 @@ a {
   }
 }
 
-/* Home FR : titres et sous-titres des sections Nos offres, adresses,
+/* Home FR + EN : titres et sous-titres des sections Nos offres, adresses,
    Nos services et Notre histoire alignés à gauche, sur le bord des cartes. */
 .home-left .offres-title,
 .home-left .adresses-intro-title,
@@ -4124,4 +4124,21 @@ a {
 .offres-section--adresses.home-left .offre-bloc:hover .offre-link {
   background: #fff;
   color: #111;
+}
+
+/* Home EN : intro adresses (version longue) alignée à gauche comme la home
+   FR, sans la barre verticale. */
+.home-left .adresses-intro-body {
+  text-align: left;
+}
+.adresses-intro-section.home-left .adresses-intro-sep {
+  display: none;
+}
+@media (max-width: 700px) {
+  .home-left .adresses-intro-body {
+    font-size: 15px;
+  }
+  .home-left .adresses-intro-body br {
+    display: none;
+  }
 }

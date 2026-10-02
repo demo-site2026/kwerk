@@ -4174,3 +4174,11 @@ a {
     padding: 24px 20px;
   }
 }
+
+/* Home desktop : titres des visuels "Nos offres" et adresses à 30px. */
+@media (min-width: 701px) {
+  #offres .offre-bloc .offre-label,
+  .offres-section--adresses .offre-bloc .offre-label {
+    font-size: 30px;
+  }
+}

@@ -4101,10 +4101,11 @@ a {
   }
 }
 
-/* Home FR : petit bouton "En savoir plus" détouré (pilule), ancré en bas de
-   chaque visuel "Nos offres" et adresses, desktop et mobile. */
+/* Home FR + EN : petit bouton "En savoir plus" détouré (pilule), ancré en bas
+   de chaque visuel "Nos offres", adresses et "Notre histoire". */
 #offres.home-left .offre-bloc .offre-link,
-.offres-section--adresses.home-left .offre-bloc .offre-link {
+.offres-section--adresses.home-left .offre-bloc .offre-link,
+.histoire-section.home-left .histoire-card .offre-link {
   display: inline-block;
   position: absolute;
   bottom: 28px;
@@ -4123,7 +4124,8 @@ a {
 /* Contour fin du bouton : trait de 1px tracé à double taille puis réduit de
    moitié (une bordure de 0.5px est arrondie à 1px par les navigateurs). */
 #offres.home-left .offre-bloc .offre-link::after,
-.offres-section--adresses.home-left .offre-bloc .offre-link::after {
+.offres-section--adresses.home-left .offre-bloc .offre-link::after,
+.histoire-section.home-left .histoire-card .offre-link::after {
   content: "";
   position: absolute;
   top: 0;
@@ -4139,12 +4141,14 @@ a {
 /* Survol : le bouton reste transparent, léger voile et contour un peu plus net
    (il ne se remplit plus de blanc). */
 #offres.home-left .offre-bloc:hover .offre-link,
-.offres-section--adresses.home-left .offre-bloc:hover .offre-link {
+.offres-section--adresses.home-left .offre-bloc:hover .offre-link,
+.histoire-section.home-left .histoire-card:hover .offre-link {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
 #offres.home-left .offre-bloc:hover .offre-link::after,
-.offres-section--adresses.home-left .offre-bloc:hover .offre-link::after {
+.offres-section--adresses.home-left .offre-bloc:hover .offre-link::after,
+.histoire-section.home-left .histoire-card:hover .offre-link::after {
   border-color: rgba(255, 255, 255, 0.85);
 }
 

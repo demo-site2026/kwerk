@@ -4055,3 +4055,24 @@ a {
     padding-right: 16px;
   }
 }
+
+/* Home FR, bloc "Nos espaces" : en mobile, visuel portrait pleine page et
+   textes aux tailles desktop (même rendu que la carte desktop). */
+@media (max-width: 700px) {
+  #offres .offre-bloc.offre-bloc--espaces {
+    background-image: url('../images/nos-espaces-bureau.jpg') !important;
+    background-position: center;
+    height: 100vh;
+    height: 100svh;
+    padding: 36px 20px 28px;
+  }
+  #offres .offre-bloc.offre-bloc--espaces .offre-label {
+    font-size: 26px;
+    letter-spacing: -0.5px;
+  }
+  #offres .offre-bloc.offre-bloc--espaces .offre-sub {
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+  }
+}

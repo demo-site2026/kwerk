@@ -4142,3 +4142,31 @@ a {
     display: none;
   }
 }
+
+/* Home FR + EN : moins de blanc entre les visuels et la phrase d'accroche de
+   la section suivante (80px desktop, 40px mobile) et entre une accroche et
+   ses visuels (40px desktop, 24px mobile). */
+#offres.home-left,
+#offres.home-left .offres-grid,
+.offres-section--adresses.home-left,
+.services-vignettes-section.home-left {
+  padding-bottom: 0;
+}
+.adresses-intro-section.home-left {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+.adresses-intro-section.home-left .section-sub {
+  margin-bottom: 0;
+}
+@media (max-width: 700px) {
+  #offres.home-left .offres-grid,
+  .offres-section--adresses.home-left,
+  .services-vignettes-section.home-left {
+    padding-bottom: 20px;
+  }
+  .adresses-intro-section.home-left {
+    padding-top: 20px;
+    padding-bottom: 24px;
+  }
+}

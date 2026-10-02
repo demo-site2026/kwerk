@@ -4021,3 +4021,37 @@ a {
     padding-top: 24px;
   }
 }
+
+/* Home FR : titres et sous-titres des sections Nos offres, adresses,
+   Nos services et Notre histoire alignés à gauche, sur le bord des cartes. */
+.home-left .offres-title,
+.home-left .adresses-intro-title,
+.home-left .section-sub {
+  text-align: left;
+}
+.home-left .offres-title {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.home-left .section-sub {
+  max-width: 800px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 40px;
+}
+.adresses-intro-section.home-left .section-sub {
+  padding: 0;
+}
+@media (max-width: 700px) {
+  .home-left .offres-title {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .home-left .section-sub {
+    padding: 0 16px;
+  }
+  .adresses-intro-section.home-left {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

@@ -4186,3 +4186,16 @@ a {
     white-space: nowrap;
   }
 }
+
+/* Home FR + EN : titres de section (Nos offres, Nos adresses, Nos services,
+   Notre histoire) et accroche "Depuis 2015" centrés, desktop et mobile.
+   Remplace l'alignement à gauche défini plus haut. */
+.home-left .offres-title,
+.home-left .adresses-intro-title,
+.home-left .section-sub {
+  text-align: center;
+}
+.home-left .section-sub {
+  margin-left: auto;
+  margin-right: auto;
+}

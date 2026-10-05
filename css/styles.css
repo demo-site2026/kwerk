@@ -3989,20 +3989,20 @@ a {
   }
 }
 
-/* Home, section d'intro : moins de blanc autour, titre et texte alignés à
+/* Section d'intro (home, Nos espaces) : moins de blanc autour, titre et texte alignés à
    gauche dans un bloc qui reste centré (la barre verticale a été retirée). */
-.exceptional-section--home {
+.exceptional-section--intro {
   padding: 64px 0 48px;
 }
-.exceptional-section--home .exceptional-container {
+.exceptional-section--intro .exceptional-container {
   max-width: 660px;
   text-align: left;
 }
-.exceptional-section--home .exceptional-heading {
+.exceptional-section--intro .exceptional-heading {
   text-align: left;
   margin-bottom: 28px;
 }
-.exceptional-section--home .exceptional-body {
+.exceptional-section--intro .exceptional-body {
   text-align: left;
   max-width: none;
   margin: 0;
@@ -4011,10 +4011,10 @@ a {
   padding-top: 40px;
 }
 @media (max-width: 700px) {
-  .exceptional-section--home {
+  .exceptional-section--intro {
     padding: 40px 0 28px;
   }
-  .exceptional-section--home .exceptional-heading {
+  .exceptional-section--intro .exceptional-heading {
     margin-bottom: 20px;
   }
   #offres .offres-title {

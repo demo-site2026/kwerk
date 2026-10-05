@@ -4249,3 +4249,11 @@ a {
     transition: none !important;
   }
 }
+
+/* Nos espaces, desktop : header plus haut pour montrer davantage de la photo
+   (3:2) et réduire l'effet de zoom du recadrage. */
+@media (min-width: 901px) {
+  .page-espaces .hero {
+    height: 85vh;
+  }
+}

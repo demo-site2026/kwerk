@@ -10,3 +10,6 @@ images/KWERK_MAIN_*
 
 # Cache Python des scripts de build — régénéré à chaque exécution
 __pycache__/
+
+# Métadonnées du Finder macOS — poussées par erreur depuis les Mac
+.DS_Store

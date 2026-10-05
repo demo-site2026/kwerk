@@ -4250,10 +4250,12 @@ a {
   }
 }
 
-/* Nos espaces, desktop : header plus haut pour montrer davantage de la photo
-   (3:2) et réduire l'effet de zoom du recadrage. */
+/* Nos espaces, desktop : le header prend les proportions exactes de la photo
+   (3:2, nos-espaces-header.jpg) pour qu'elle soit visible en entier, sans
+   rognage ni bandes. Sa hauteur suit donc la largeur de l'écran. */
 @media (min-width: 901px) {
   .page-espaces .hero {
-    height: 85vh;
+    height: auto;
+    aspect-ratio: 3 / 2;
   }
 }

@@ -4225,3 +4225,17 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Intro dont le titre doit tenir sur une ligne (Nos espaces) : sur desktop, le
+   bloc prend la largeur du titre et le texte s'aligne dessus. min-content +
+   nowrap = largeur du titre sur une ligne. En dessous de 1000px, le titre EN
+   (834px) ne tiendrait plus : retour au comportement normal. */
+@media (min-width: 1000px) {
+  .exceptional-section--title-line .exceptional-container {
+    width: min-content;
+    max-width: none;
+  }
+  .exceptional-section--title-line .exceptional-heading {
+    white-space: nowrap;
+  }
+}

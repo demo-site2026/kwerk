@@ -4239,3 +4239,13 @@ a {
     white-space: nowrap;
   }
 }
+
+/* Nos espaces, desktop : pas d'animation d'apparition au défilement (AOS),
+   images et textes sont affichés d'emblée. */
+@media (min-width: 701px) {
+  .page-espaces [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

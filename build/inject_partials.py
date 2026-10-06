@@ -38,7 +38,8 @@ PER_LANG = {"nav", "menu", "footer"}  # contenu propre à chaque langue
 # Pages sans chrome partagé : redirections et fragments. Elles ne reçoivent aucun
 # bloc KW, et ne doivent jamais apparaître dans un hreflang (contact.html est en
 # noindex, en/index.html est une redirection).
-STUBS = {"contact.html", "en/index.html", "kwerk_bandeau.html"}
+STUBS = {"contact.html", "en/index.html", "kwerk_bandeau.html",
+         "maison-kwerk.html", "en/maison-kwerk.html"}  # redirections vers experience-kwerk.html
 
 REQUIRED = {                          # marqueurs attendus sur une page « complète »
     "head": True, "nav": True, "menu": True, "footer": True, "scripts": True,

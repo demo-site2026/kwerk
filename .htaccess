@@ -19,7 +19,11 @@ RewriteRule ^adresses/messine/?$ /adresses/messine.html [R=301,L]
 RewriteRule ^adresses/madeleine/?$ /adresses/madeleine.html [R=301,L]
 RewriteRule ^adresses/saint-honore/?$ /adresses/saint-honore.html [R=301,L]
 
-RewriteRule ^adresses/?$ /maison-kwerk.html [R=301,L]
+RewriteRule ^adresses/?$ /experience-kwerk.html [R=301,L]
+
+# Page « Experience by Kwerk » renommée (anciennement maison-kwerk.html)
+RewriteRule ^maison-kwerk(\.html)?$ /experience-kwerk.html [R=301,L]
+RewriteRule ^en/maison-kwerk(\.html)?$ /en/experience-kwerk.html [R=301,L]
 
 RewriteRule ^services/?$ /espaces.html [R=301,L]
 RewriteRule ^espaces/?$ /espaces.html [R=301,L]

@@ -4251,11 +4251,12 @@ a {
 }
 
 /* Nos espaces, desktop : le header prend les proportions exactes de la photo
-   (3:2, nos-espaces-header.jpg) pour qu'elle soit visible en entier, sans
-   rognage ni bandes. Sa hauteur suit donc la largeur de l'écran. */
+   (nos-espaces-header-v2.jpg, 1536x781, recadrée sous le bureau) pour qu'elle
+   soit visible en entier, sans rognage ni bandes. Sa hauteur suit la largeur
+   de l'écran. */
 @media (min-width: 901px) {
   .page-espaces .hero {
     height: auto;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 1536 / 781;
   }
 }

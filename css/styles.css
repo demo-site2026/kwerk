@@ -4314,14 +4314,22 @@ a {
     line-height: 1.4;
     margin: 8px 0 0;
   }
+  /* Description au format du texte d'intro de la page (.exceptional-body) :
+     bloc centré de 660px, texte aligné à gauche ; bouton centré dessous. */
   .esp-cards-text {
-    margin: 48px 0 0;
+    box-sizing: border-box;
+    max-width: 740px;
+    margin: 56px auto 0;
     padding: 0 40px;
   }
-  /* Description sur toute la largeur des 3 photos, bouton centré dessous. */
   .esp-cards-text .esp-desc {
     max-width: none;
     margin: 0 0 32px;
+    font-family: "Helvetica Neue", HelveticaNeue, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #222;
   }
   .esp-cards-text .adresse-details-btn {
     display: table;

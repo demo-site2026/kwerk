@@ -4248,12 +4248,13 @@ a {
   transition: none !important;
 }
 
-/* Nos espaces, desktop : le header prend les proportions exactes de la photo
-   (nos-espaces-header-v2.jpg, 1536x781, recadrée sous le bureau) pour qu'elle
-   soit visible en entier, sans rognage ni bandes. Sa hauteur suit la largeur
-   de l'écran. */
+/* Header "bandeau" commun (Nos espaces, Nos services…), desktop : proportions
+   de la photo de Nos espaces (nos-espaces-header-v2.jpg, 1536x781), pour que
+   toutes ces pages aient la même hauteur de header. Sa hauteur suit la largeur
+   de l'écran ; une photo d'autres proportions est recadrée (object-fit: cover).
+   En mobile, ces headers gardent la hauteur commune (45vh). */
 @media (min-width: 901px) {
-  .page-espaces .hero {
+  .hero.hero--banner {
     height: auto;
     aspect-ratio: 1536 / 781;
   }

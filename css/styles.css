@@ -4272,7 +4272,7 @@ a {
     padding: 40px 0 80px;
     background: #fff;
   }
-  .page-espaces .esp-section--bureau { display: none; }
+  .page-espaces .esp-section--old { display: none; }
   .esp-cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

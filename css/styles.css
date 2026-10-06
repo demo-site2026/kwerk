@@ -4240,14 +4240,12 @@ a {
   }
 }
 
-/* Nos espaces, desktop : pas d'animation d'apparition au défilement (AOS),
+/* Nos espaces (desktop et mobile) : pas d'animation d'apparition au défilement (AOS),
    images et textes sont affichés d'emblée. */
-@media (min-width: 701px) {
-  .page-espaces [data-aos] {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
+.page-espaces [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 /* Nos espaces, desktop : le header prend les proportions exactes de la photo
@@ -4261,81 +4259,100 @@ a {
   }
 }
 
-/* TEST Nos espaces, desktop : bloc Bureau individuel au format "Nos offres" de
-   la home. Titre + surface en haut à gauche de la 1re photo (comme les visuels
-   de la home), 3 photos, description dessous alignée sur la 1re photo.
-   Il remplace l'ancien bloc sur desktop ; en mobile, seul l'ancien s'affiche. */
-.esp-cards { display: none; }
-@media (min-width: 1001px) {
-  .page-espaces .esp-cards {
-    display: block;
-    padding: 40px 0 80px;
-    background: #fff;
-  }
-  .page-espaces .esp-section--old { display: none; }
-  .esp-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    padding: 0 40px;
-  }
-  /* Proportion 9:10 : assez haute pour l'effet "Nos offres", sans trop zoomer
-     les photos paysage (on en voit ~60 % de la largeur). */
-  .esp-card {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 9 / 10;
-    object-fit: cover;
-    display: block;
-  }
-  .esp-card-wrap { position: relative; }
-  .esp-card-label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 32px 28px 60px;
-    background: linear-gradient(to bottom, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 100%);
-  }
-  .esp-cards-title {
-    color: #fff;
-    font-family: "Helvetica Neue", HelveticaNeue, sans-serif;
-    font-weight: 300;
-    font-size: clamp(12px, calc(2.85vw - 7.5px), 30px);
-    letter-spacing: -0.5px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    white-space: nowrap;
-    margin: 0;
-  }
-  .esp-cards-sub {
-    color: #fff;
-    font-family: "Helvetica Neue", HelveticaNeue, sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    letter-spacing: 0.05em;
-    line-height: 1.4;
-    margin: 8px 0 0;
-  }
-  /* Description au format du texte d'intro de la page (.exceptional-body) :
-     bloc centré de 660px, texte aligné à gauche ; bouton centré dessous. */
-  .esp-cards-text {
-    box-sizing: border-box;
-    max-width: 740px;
-    margin: 56px auto 0;
-    padding: 0 40px;
-  }
-  .esp-cards-text .esp-desc {
-    max-width: none;
-    margin: 0 0 32px;
-    font-family: "Helvetica Neue", HelveticaNeue, sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.7;
-    color: #222;
-  }
-  .esp-cards-text .adresse-details-btn {
-    display: table;
-    margin: 0 auto;
-  }
+/* Nos espaces : blocs Bureau individuel, Suite exécutive, Étage privatif au
+   format "Nos offres" de la home. Titre + surface dans la 1re photo, 3 photos,
+   description au format de l'intro, bouton centré. Les anciens blocs en
+   mosaïque (esp-section--old) sont masqués partout. */
+.page-espaces .esp-cards {
+  display: block;
+  padding: 40px 0 80px;
+  background: #fff;
 }
+.page-espaces .esp-section--old { display: none; }
+.esp-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 0 40px;
+}
+/* Proportion 9:10 : assez haute pour l'effet "Nos offres", sans trop zoomer
+   les photos paysage (on en voit ~60 % de la largeur). */
+.esp-card {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 10;
+  object-fit: cover;
+  display: block;
+}
+.esp-card-wrap { position: relative; }
+.esp-card-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 28px 60px;
+  background: linear-gradient(to bottom, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 100%);
+}
+.esp-cards-title {
+  color: #fff;
+  font-family: "Helvetica Neue", HelveticaNeue, sans-serif;
+  font-weight: 300;
+  font-size: clamp(12px, calc(2.85vw - 7.5px), 30px);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: 0;
+}
+.esp-cards-sub {
+  color: #fff;
+  font-family: "Helvetica Neue", HelveticaNeue, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+  margin: 8px 0 0;
+}
+/* Description au format du texte d'intro de la page (.exceptional-body) :
+   bloc centré de 660px, texte aligné à gauche ; bouton centré dessous. */
+.esp-cards-text {
+  box-sizing: border-box;
+  max-width: 740px;
+  margin: 56px auto 0;
+  padding: 0 40px;
+}
+.esp-cards-text .esp-desc {
+  max-width: none;
+  margin: 0 0 32px;
+  font-family: "Helvetica Neue", HelveticaNeue, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #222;
+}
+.esp-cards-text .adresse-details-btn {
+  display: table;
+  margin: 0 auto;
+}
+
+/* Nos espaces, mobile : 1re photo en grand (titre dedans), les deux autres
+   côte à côte dessous, texte aux tailles du texte d'intro mobile. */
+@media (max-width: 700px) {
+  .page-espaces .esp-cards { padding: 24px 0 48px; }
+  .esp-cards-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 0 16px;
+  }
+  .esp-card-wrap { grid-column: 1 / -1; }
+  .esp-card { aspect-ratio: 4 / 5; }
+  .esp-card-label { padding: 24px 20px 48px; }
+  .esp-cards-title { font-size: 26px; white-space: normal; }
+  .esp-cards-sub { font-size: 18px; }
+  .esp-cards-text { margin-top: 28px; padding: 0 24px; }
+  .esp-cards-text .esp-desc { font-size: 15px; line-height: 1.75; }
+}
+@media (max-width: 480px) {
+  .esp-cards-text .esp-desc { font-size: 14px; }
+}
+

@@ -4318,8 +4318,13 @@ a {
     margin: 48px 0 0;
     padding: 0 40px;
   }
+  /* Description sur toute la largeur des 3 photos, bouton centré dessous. */
   .esp-cards-text .esp-desc {
-    max-width: 640px;
-    margin: 0 0 24px;
+    max-width: none;
+    margin: 0 0 32px;
+  }
+  .esp-cards-text .adresse-details-btn {
+    display: table;
+    margin: 0 auto;
   }
 }

@@ -4260,3 +4260,52 @@ a {
     aspect-ratio: 1536 / 781;
   }
 }
+
+/* TEST Nos espaces, desktop : bloc Bureau individuel au format "Nos offres" de
+   la home (titre centré + surface, 3 photos sans texte, description dessous).
+   Il remplace l'ancien bloc sur desktop ; en mobile, seul l'ancien s'affiche. */
+.esp-cards { display: none; }
+@media (min-width: 1001px) {
+  .page-espaces .esp-cards {
+    display: block;
+    padding: 40px 0 80px;
+    background: #fff;
+  }
+  .page-espaces .esp-section--bureau { display: none; }
+  .esp-cards-title {
+    text-align: center;
+    font-family: "Helvetica Neue", HelveticaNeue, sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    letter-spacing: -0.5px;
+    color: #111;
+    margin: 0;
+  }
+  .esp-cards-sub {
+    text-align: center;
+    font-family: "Helvetica Neue", HelveticaNeue, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #777;
+    margin: 12px 0 40px;
+  }
+  .esp-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 0 40px;
+  }
+  .esp-card {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+  }
+  .esp-cards-text {
+    box-sizing: border-box;
+    max-width: 740px;
+    margin: 48px auto 0;
+    padding: 0 40px;
+  }
+  .esp-cards-text .esp-desc { margin: 0 0 24px; }
+}

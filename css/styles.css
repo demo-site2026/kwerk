@@ -4262,7 +4262,8 @@ a {
 }
 
 /* TEST Nos espaces, desktop : bloc Bureau individuel au format "Nos offres" de
-   la home (titre centré + surface, 3 photos sans texte, description dessous).
+   la home. Titre + surface en haut à gauche de la 1re photo (comme les visuels
+   de la home), 3 photos, description dessous alignée sur la 1re photo.
    Il remplace l'ancien bloc sur desktop ; en mobile, seul l'ancien s'affiche. */
 .esp-cards { display: none; }
 @media (min-width: 1001px) {
@@ -4272,23 +4273,6 @@ a {
     background: #fff;
   }
   .page-espaces .esp-section--bureau { display: none; }
-  .esp-cards-title {
-    text-align: center;
-    font-family: "Helvetica Neue", HelveticaNeue, sans-serif;
-    font-weight: 300;
-    font-size: 40px;
-    letter-spacing: -0.5px;
-    color: #111;
-    margin: 0;
-  }
-  .esp-cards-sub {
-    text-align: center;
-    font-family: "Helvetica Neue", HelveticaNeue, sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    color: #777;
-    margin: 12px 0 40px;
-  }
   .esp-cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -4301,11 +4285,41 @@ a {
     object-fit: cover;
     display: block;
   }
+  .esp-card-wrap { position: relative; }
+  .esp-card-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 32px 28px 60px;
+    background: linear-gradient(to bottom, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 100%);
+  }
+  .esp-cards-title {
+    color: #fff;
+    font-family: "Helvetica Neue", HelveticaNeue, sans-serif;
+    font-weight: 300;
+    font-size: clamp(12px, calc(2.85vw - 7.5px), 30px);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0;
+  }
+  .esp-cards-sub {
+    color: #fff;
+    font-family: "Helvetica Neue", HelveticaNeue, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    margin: 8px 0 0;
+  }
   .esp-cards-text {
-    box-sizing: border-box;
-    max-width: 740px;
-    margin: 48px auto 0;
+    margin: 48px 0 0;
     padding: 0 40px;
   }
-  .esp-cards-text .esp-desc { margin: 0 0 24px; }
+  .esp-cards-text .esp-desc {
+    max-width: 640px;
+    margin: 0 0 24px;
+  }
 }

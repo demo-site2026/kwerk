@@ -4260,3 +4260,36 @@ a {
     aspect-ratio: 1536 / 781;
   }
 }
+
+/* TEST Nos espaces, desktop : deux grandes photos paysage côte à côte, texte en
+   dessous sur deux colonnes (titre / surface à gauche, description + bouton à
+   droite). Mobile inchangé. */
+@media (min-width: 1001px) {
+  .page-espaces .esp-inner,
+  .page-espaces .esp-inner.esp-reverse {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .page-espaces .esp-inner .esp-mosaic { order: 1; }
+  .page-espaces .esp-inner .esp-text { order: 2; }
+  .page-espaces .esp-mosaic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .page-espaces .esp-mosaic-strip { display: contents; }
+  .page-espaces .esp-mosaic-strip img:nth-child(n+2) { display: none; }
+  .page-espaces .esp-mosaic-main,
+  .page-espaces .esp-mosaic-strip img {
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+  .page-espaces .esp-text {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    column-gap: 64px;
+    padding-top: 0;
+  }
+  .page-espaces .esp-desc { margin-top: 0; margin-bottom: 0; }
+}

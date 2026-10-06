@@ -4001,6 +4001,7 @@ a {
 .exceptional-section--intro .exceptional-heading {
   text-align: left;
   margin-bottom: 28px;
+  text-wrap: balance; /* titre long : lignes de longueur égale (Nos services) */
 }
 .exceptional-section--intro .exceptional-body {
   text-align: left;

@@ -4367,3 +4367,61 @@ a {
 .mk-offer-section .mk-offer-grid { text-align: left; }
 .mk-offer-section .mk-offer-card { align-items: flex-start; }
 .mk-offer-section .mk-offer-bar { margin: 0 0 20px; }
+
+/* Experience by Kwerk, bloc "Une offre, deux regards" : mise en page éditoriale.
+   Titre aligné à gauche sur le bord des colonnes ; chaque colonne surmontée d'un
+   filet fin ; hiérarchie surtitre (petit, gris, capitales) > titre > texte.
+   Sélecteurs "section.xxx" pour passer devant (en-)maison-kwerk.css. */
+section.mk-offer-section { padding: 72px 0 96px; }
+section.mk-offer-section .mk-offer-container {
+  max-width: 1120px;
+  padding: 0 40px;
+  text-align: left;
+}
+section.mk-offer-section .exceptional-heading {
+  text-align: left;
+  margin: 0 0 56px;
+}
+section.mk-offer-section .mk-offer-grid {
+  gap: 80px;
+  margin-top: 0;
+  text-align: left;
+}
+section.mk-offer-section .mk-offer-card {
+  padding: 32px 0 0;
+  border-top: 1px solid #d9d9d9;
+  align-items: flex-start;
+}
+section.mk-offer-section .mk-offer-eyebrow {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  color: #8a8a8a;
+  margin-bottom: 18px;
+}
+section.mk-offer-section .mk-offer-bar { display: none; }
+section.mk-offer-section .mk-offer-title {
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+  color: #111;
+  margin: 0 0 20px;
+}
+section.mk-offer-section .mk-offer-body {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #444;
+  max-width: 46ch;
+}
+@media (max-width: 700px) {
+  section.mk-offer-section { padding: 48px 0 56px; }
+  section.mk-offer-section .mk-offer-container { padding: 0 24px; }
+  section.mk-offer-section .exceptional-heading { margin-bottom: 32px; }
+  section.mk-offer-section .mk-offer-grid { grid-template-columns: 1fr; gap: 48px; }
+  section.mk-offer-section .mk-offer-card { padding-top: 24px; }
+  section.mk-offer-section .mk-offer-eyebrow { font-size: 11px; }
+  section.mk-offer-section .mk-offer-title { font-size: 22px; }
+  section.mk-offer-section .mk-offer-body { font-size: 15px; }
+}

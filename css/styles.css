@@ -4359,3 +4359,10 @@ a {
   .esp-cards-text .esp-desc { font-size: 14px; }
 }
 
+
+/* Experience by Kwerk, bloc "Une offre, deux regards" : contenu des deux
+   colonnes aligné à gauche (surtitre, trait, titre, texte). Sélecteurs doublés
+   pour passer devant (en-)maison-kwerk.css, chargé après styles.css. */
+.mk-offer-section .mk-offer-grid { text-align: left; }
+.mk-offer-section .mk-offer-card { align-items: flex-start; }
+.mk-offer-section .mk-offer-bar { margin: 0 0 20px; }

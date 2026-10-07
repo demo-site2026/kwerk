@@ -4373,9 +4373,13 @@ a {
    filet fin ; hiérarchie surtitre (petit, gris, capitales) > titre > texte.
    Sélecteurs "section.xxx" pour passer devant (en-)maison-kwerk.css. */
 section.mk-offer-section { padding: 72px 0 96px; }
+/* Bord gauche = bord gauche du texte d'intro (bloc de 660px centré, 40px de
+   marge intérieure) ; bord droit = celui d'un conteneur de 1120px. Titre et
+   colonnes partagent ainsi l'axe du texte au-dessus. */
 section.mk-offer-section .mk-offer-container {
-  max-width: 1120px;
-  padding: 0 40px;
+  max-width: none;
+  padding-left: calc((100% - 660px) / 2 + 40px);
+  padding-right: max(40px, calc((100% - 1120px) / 2 + 40px));
   text-align: left;
 }
 section.mk-offer-section .exceptional-heading {

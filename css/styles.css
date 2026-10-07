@@ -4241,10 +4241,11 @@ a {
   }
 }
 
-/* Nos espaces et Nos services (desktop et mobile) : pas d'animation d'apparition au défilement (AOS),
+/* Nos espaces, Nos services, Experience by Kwerk (desktop et mobile) : pas d'animation d'apparition au défilement (AOS),
    images et textes sont affichés d'emblée. */
 .page-espaces [data-aos],
-.page-services [data-aos] {
+.page-services [data-aos],
+.page-experience [data-aos] {
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;

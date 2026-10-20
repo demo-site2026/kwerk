@@ -7,6 +7,40 @@ Aucun outil à installer, **aucun Cloudflare**. Prévisualisation locale : `pyth
 > Ne l'ouvrir qu'en cas de besoin précis : encoder une vidéo, comprendre le tampon `?v=`, débusquer
 > une image faussement orpheline, préparer une promotion.
 
+## Méthode de travail avec le client
+
+Ces règles valent pour chaque demande, sans que le client ait à les rappeler.
+
+- **Toute modification s'applique en FR et en EN, sur mobile et sur desktop.** Si une demande ne
+  cite qu'une langue ou un support, faire quand même les deux, puis le signaler.
+- **Rédaction** : français correct, réponses concises, pas d'autosatisfaction. **Jamais de tiret
+  long** (ni dans les réponses, ni dans les textes du site). **Jamais le verbe « penser »**
+  (interdit par le client).
+- **Vocabulaire du site** : « Experience by Kwerk » s'écrit **sans accent** partout. En EN :
+  « Our Offer », « locations » (pas « addresses »), « food & beverage » (pas « dining »),
+  « Our journey » dans les pages mais « Our story » dans le footer.
+- **Format de page validé** (Nos espaces, Nos services, Experience by Kwerk, Événements). Quand le
+  client demande « pareil que les autres pages », appliquer les trois d'un coup, en FR et en EN :
+  1. intro `exceptional-section--intro` (pas de barre verticale, titre et texte alignés à gauche
+     dans un bloc centré de 660 px) ;
+  2. header `hero--banner` (même hauteur sur toutes les pages) ;
+  3. pas d'animation au défilement : classe `page-xxx` sur le `<body>`, ajoutée au sélecteur de la
+     règle AOS dans `css/styles.css`.
+  Pages restantes : accueil, Nos adresses, Messine, Saint-Honoré, Madeleine, Notre histoire.
+- **Où écrire le CSS** : les CSS de page sans `?v=` (`maison-kwerk.css`, `espaces.css`,
+  `event.css`) ne sont pas re-téléchargés par les visiteurs. Mettre les surcharges dans
+  `css/styles.css` avec une spécificité plus forte (ex. `section.mk-offer-section …`).
+- **Photos** : ne jamais étirer. Repartir de l'original fourni, recadrer proprement, régler
+  `object-position` d'après la position réelle du sujet, et simuler le cadrage (PIL) avant de
+  pousser. Une image modifiée change de nom (`-v2`).
+- **Après chaque push** : attendre le déploiement (1 à 2 min), vérifier en ligne (`curl` ou
+  navigateur), puis donner au client un lien avec `?v=N`, ou lui conseiller la navigation privée.
+  Le client voit souvent une version en cache et croit que rien n'a changé.
+- **Push** : utiliser le remote SSH `git@github.com:demo-site2026/kwerk.git` (le HTTPS échoue sur
+  cette configuration). Sur un nouvel ordinateur, créer une clé SSH et l'ajouter au compte GitHub.
+- **Mise en prod** : au passage sur www.kwerk.fr, le dev doit déployer `.htaccess` (redirections
+  301 de `maison-kwerk` vers `experience-kwerk`).
+
 ## ⛔ Les six règles à ne jamais enfreindre
 
 1. **Ne rien éditer à l'intérieur d'une zone `<!-- KW:… -->`** — c'est généré, ce sera écrasé.

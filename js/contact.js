@@ -261,6 +261,9 @@ class ContactFormValidator {
 
     try {
       await this.submitToHubspot(formData);
+      // Conversion GTM/GA4 : uniquement après un envoi HubSpot réussi
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: "generate_lead", form_produit: formData.get("produit") || "" });
       this.showSuccess();
       this.form.reset();
     } catch (error) {
